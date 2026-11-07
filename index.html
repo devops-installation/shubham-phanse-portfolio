@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shubham Phanse | Senior Cloud & DevOps Engineer</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+  :root {
+    --bg: #f8fafc; --card: #ffffff; --border: #e2e8f0;
+    --text: #0f172a; --muted: #475569; --grid: rgba(15,23,42,.06);
+  }
+  html.dark {
+    --bg: #141a26; --card: #1d232f; --border: #2a3447;
+    --text: #e6ebf5; --muted: #94a3b8; --grid: rgba(148,163,184,.07);
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+  body {
+    background-color: var(--bg); color: var(--text);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 40px 40px;
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    transition: background-color .25s, color .25s;
+  }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 1rem; }
+  .muted { color: var(--muted); }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  .header-bar { background: color-mix(in srgb, var(--bg) 85%, transparent); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+  /* theme icons: moon in dark, sun in light */
+  html.dark .icon-sun { display: none; }
+  html:not(.dark) .icon-moon { display: none; }
+  /* accents stay readable in light mode */
+  html:not(.dark) .text-sky-400 { color: #0369a1; }
+  html:not(.dark) .text-emerald-400 { color: #047857; }
+  html:not(.dark) .text-amber-400 { color: #b45309; }
+  .tab { border: 1px solid var(--border); color: var(--muted); }
+  .tab:hover { color: var(--text); }
+  .tab.active { background: #0ea5e9; border-color: #0ea5e9; color: #fff; }
+  .skill { transition: opacity .2s, transform .2s; }
+  .skill.hide { display: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid #38bdf8; outline-offset: 2px; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+<script>
+  tailwind.config = { darkMode: 'class' };
+  // apply saved theme before paint
+  try { if (localStorage.getItem('theme') === 'light') document.documentElement.classList.remove('dark'); } catch (e) {}
+</script>
+</head>
+<body class="min-h-screen antialiased">
+
+<!-- 1. HEADER -->
+<header class="header-bar sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+    <a href="#overview" class="mono font-semibold text-sky-400">&gt; shubham.phanse_</a>
+    <nav class="hidden md:flex items-center gap-6 text-sm muted">
+      <a href="#overview" class="hover:text-sky-400">Overview</a>
+      <a href="#tattvora" class="hover:text-sky-400">Tattvora (CTO)</a>
+      <a href="#experience" class="hover:text-sky-400">Experience</a>
+      <a href="#skills" class="hover:text-sky-400">Skills</a>
+    </nav>
+    <button id="themeToggle" class="card w-10 h-10 flex items-center justify-center hover:border-sky-400" aria-label="Switch between dark and light theme">
+      <i data-lucide="moon" class="icon-moon w-5 h-5 text-sky-400"></i>
+      <i data-lucide="sun" class="icon-sun w-5 h-5 text-amber-400"></i>
+    </button>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 sm:px-6 py-8 space-y-6">
+
+<!-- 2. HERO BENTO -->
+<section id="overview" class="grid lg:grid-cols-3 gap-6">
+  <!-- Left: intro -->
+  <div class="card p-6 sm:p-8 lg:col-span-2 flex flex-col gap-6">
+    <div class="flex flex-wrap gap-2 text-xs font-medium">
+      <span class="px-3 py-1 rounded-full border border-sky-400/40 bg-sky-400/10 text-sky-400">Co-Founder &amp; CTO @ Tattvora</span>
+      <span class="px-3 py-1 rounded-full border border-emerald-400/40 bg-emerald-400/10 text-emerald-400">5+ Yrs Production Cloud</span>
+    </div>
+
+    <div>
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Shubham Phanse</h1>
+      <p class="mt-2 text-lg text-sky-400 font-medium">Senior Cloud &amp; DevOps Engineer | Platform &amp; Infrastructure Specialist</p>
+
+      <ul class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm muted">
+        <li><a href="mailto:phanases@gmail.com" class="flex items-center gap-2 hover:text-sky-400"><i data-lucide="mail" class="w-4 h-4 text-sky-400"></i>phanases@gmail.com</a></li>
+        <li><a href="tel:+918087577789" class="flex items-center gap-2 hover:text-sky-400"><i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i>+91 8087577789</a></li>
+        <li><a href="https://www.linkedin.com/in/shubham-phanse-39a56b294" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-sky-400"><i class="devicon-linkedin-plain text-sky-400"></i>in/shubham-phanse-39a56b294</a></li>
+        <li><a href="https://github.com/orgs/devops-installation/repositories" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-sky-400"><i class="devicon-github-original text-amber-400"></i>github.com/orgs/devops-installation</a></li>
+      </ul>
+    </div>
+
+    <p class="muted leading-relaxed max-w-2xl">
+      Platform Architect &amp; CTO building scalable cloud infrastructure, automated GitOps delivery pipelines, and enterprise multi-account governance across AWS, GCP, and Azure.
+    </p>
+
+    <!-- Certificate -->
+    <div class="rounded-xl border p-4 sm:p-5" style="border-color: var(--border); background: color-mix(in srgb, var(--bg) 60%, transparent);">
+      <div class="flex items-start gap-3">
+        <i data-lucide="award" class="w-6 h-6 text-amber-400 shrink-0 mt-0.5"></i>
+        <div class="min-w-0 flex-1">
+          <p class="font-semibold">AWS Certified Solutions Architect – Associate</p>
+          <p class="text-sm muted mt-1">Score: <span class="text-emerald-400 font-semibold">776</span></p>
+          <p class="text-sm muted mt-1">Validation Code:</p>
+          <code id="certCode" class="mono text-xs sm:text-sm text-sky-400 break-all">aec03e65df5a478a856ed1bc6c319fca</code>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <button id="copyBtn" class="tab flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm">
+              <i data-lucide="copy" class="w-4 h-4"></i><span id="copyLabel">Copy Code</span>
+            </button>
+            <a href="https://cp.certmetrics.com/amazon/en/public/verify/credential/aec03e65df5a478a856ed1bc6c319fca" target="_blank" rel="noopener" class="tab flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm hover:border-sky-400">
+              <i data-lucide="badge-check" class="w-4 h-4"></i>Verify credential
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Metrics -->
+    <div class="grid sm:grid-cols-3 gap-3">
+      <div class="rounded-xl border p-4" style="border-color: var(--border);">
+        <p class="text-2xl font-bold text-sky-400">40%</p><p class="text-sm muted">Provisioning Reduction</p>
+      </div>
+      <div class="rounded-xl border p-4" style="border-color: var(--border);">
+        <p class="text-2xl font-bold text-emerald-400">99.9%</p><p class="text-sm muted">High Availability</p>
+      </div>
+      <div class="rounded-xl border p-4" style="border-color: var(--border);">
+        <p class="text-2xl font-bold text-amber-400">Multi-Cloud</p><p class="text-sm muted">Governance</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: visuals -->
+  <div class="flex flex-col gap-6">
+    <div class="card overflow-hidden relative">
+      <img src="profile.jpg" alt="Portrait of Shubham Phanse" class="w-full aspect-square object-cover">
+      <span class="absolute bottom-3 left-3 right-3 sm:right-auto px-3 py-1.5 rounded-full text-xs font-medium bg-slate-900/80 text-amber-400 border border-amber-400/40 backdrop-blur">At AWS Innovation Day 🏆</span>
+    </div>
+    <a href="https://github.com/orgs/devops-installation/repositories" target="_blank" rel="noopener" class="card p-4 flex items-center gap-4 hover:border-sky-400 transition-colors">
+      <i class="devicon-github-original text-3xl"></i>
+      <div><p class="font-semibold">GitHub</p><p class="text-sm muted">devops-installation</p></div>
+      <i data-lucide="arrow-up-right" class="w-5 h-5 ml-auto muted"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/shubham-phanse-39a56b294" target="_blank" rel="noopener" class="card p-4 flex items-center gap-4 hover:border-sky-400 transition-colors">
+      <i class="devicon-linkedin-plain text-3xl text-sky-400"></i>
+      <div><p class="font-semibold">LinkedIn</p><p class="text-sm muted">shubham-phanse</p></div>
+      <i data-lucide="arrow-up-right" class="w-5 h-5 ml-auto muted"></i>
+    </a>
+  </div>
+</section>
+
+<!-- 3. TATTVORA -->
+<section id="tattvora" class="card p-6 sm:p-8">
+  <div class="flex flex-wrap items-center justify-between gap-3">
+    <div>
+      <p class="text-sm text-emerald-400 font-medium">Tattvora</p>
+      <h2 class="text-2xl sm:text-3xl font-bold">Co-Founder &amp; Chief Technology Officer (CTO)</h2>
+    </div>
+    <span class="mono text-sm px-3 py-1 rounded-full border" style="border-color: var(--border);">Jan 2026 – Aug 2026</span>
+  </div>
+  <p class="mt-4 muted leading-relaxed max-w-3xl">
+    Leading platform architecture for an AWS-focused Cloud Intelligence SaaS product designed to solve complex infrastructure governance and cloud cost sprawl.
+  </p>
+  <h3 class="mt-6 mb-3 text-sm font-semibold muted">CTO stack</h3>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <div class="rounded-xl border p-4 flex items-center gap-3" style="border-color: var(--border);"><i class="devicon-docker-plain colored text-3xl"></i><span class="font-medium text-sm">Docker Compose</span></div>
+    <div class="rounded-xl border p-4 flex items-center gap-3" style="border-color: var(--border);"><i class="devicon-postgresql-plain colored text-3xl"></i><span class="font-medium text-sm">PostgreSQL 17</span></div>
+    <div class="rounded-xl border p-4 flex items-center gap-3" style="border-color: var(--border);"><i class="devicon-githubactions-plain text-3xl text-sky-400"></i><span class="font-medium text-sm">GitHub Actions</span></div>
+    <div class="rounded-xl border p-4 flex items-center gap-3" style="border-color: var(--border);"><i class="devicon-amazonwebservices-plain-wordmark text-3xl text-amber-400"></i><span class="font-medium text-sm">AWS Multi-Account</span></div>
+  </div>
+</section>
+
+<!-- 4. SKILLS -->
+<section id="skills" class="card p-6 sm:p-8">
+  <h2 class="text-2xl sm:text-3xl font-bold">Technical skills</h2>
+  <div id="tabs" class="mt-5 flex flex-wrap gap-2" role="tablist">
+    <button class="tab active px-4 py-1.5 rounded-full text-sm" data-filter="all">All</button>
+    <button class="tab px-4 py-1.5 rounded-full text-sm" data-filter="cloud">Cloud (AWS/Azure/GCP)</button>
+    <button class="tab px-4 py-1.5 rounded-full text-sm" data-filter="iac">IaC &amp; Containers</button>
+    <button class="tab px-4 py-1.5 rounded-full text-sm" data-filter="obs">Observability &amp; DBs</button>
+    <button class="tab px-4 py-1.5 rounded-full text-sm" data-filter="os">OS &amp; Scripting</button>
+  </div>
+  <div id="skillGrid" class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3"></div>
+</section>
+
+<!-- 5. EXPERIENCE -->
+<section id="experience" class="card p-6 sm:p-8">
+  <div class="flex flex-wrap items-baseline justify-between gap-2">
+    <h2 class="text-2xl sm:text-3xl font-bold">Experience</h2>
+    <span class="mono text-sm muted">Dec 2024 – present</span>
+  </div>
+  <ol class="mt-8 relative border-l ml-2" style="border-color: var(--border);">
+    <li class="pl-6 pb-8 relative">
+      <span class="absolute w-3 h-3 rounded-full bg-sky-400" style="left:-7px;top:8px"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4"><h3 class="font-semibold text-lg">Cloud Engineer – Assistant Manager</h3><span class="mono text-xs muted">Dec 2024 – Present</span></div>
+      <p class="text-sky-400 text-sm">WhiteOak Capital Asset Management Limited</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs"><span class="tag">AWS</span><span class="tag">EKS</span><span class="tag">Terraform</span><span class="tag">Control Tower</span></div>
+      <details class="mt-3" open><summary class="cursor-pointer text-sm text-sky-400 select-none">What I did (11)</summary><ul class="mt-3 space-y-2 text-sm muted list-disc pl-5 max-w-3xl leading-relaxed"><li>Designed and implemented secure, scalable AWS architectures supporting business-critical applications with high performance, reliability, and regulatory compliance.</li><li>Deployed and managed containerized workloads using Docker 24.x, ECR, ECS (Fargate), and EKS v1.29 (Helm) for orchestration, horizontal scaling, and CI/CD integration.</li><li>Implemented serverless solutions with AWS Lambda, API Gateway v2, and EventBridge, reducing infrastructure costs by eliminating idle compute.</li><li>Automated infrastructure provisioning using Terraform v1.7+ and AWS CloudFormation, cutting manual provisioning time by 60% and ensuring drift-free environments.</li><li>Established multi-account AWS governance with AWS Organizations, Control Tower, IAM, and SCPs across 15+ AWS accounts.</li><li>Configured advanced cloud networking with VPCs, Transit Gateway, PrivateLink, and VPN Connect, with zero single points of failure.</li><li>Built observability with CloudWatch, Prometheus v2.50, Grafana v10.3, AWS X-Ray, and OpenTelemetry, achieving 99.9% system uptime and sub-5-minute incident detection.</li><li>Developed automated alert dashboards integrated with SIEM systems to detect anomalies and trigger automated remediation workflows.</li><li>Managed RDS Aurora, PostgreSQL, and DynamoDB clusters with Multi-AZ failover, read replicas, and automated snapshots, ensuring 99.95% database availability.</li><li>Ran cloud cost optimization reviews (rightsizing, Reserved/Spot Instances, S3 lifecycle policies), achieving a 30%+ reduction in monthly cloud spend.</li><li>Led incident management and Root Cause Analysis (RCA) for P1/P2 production incidents, adding runbooks and automated remediation to prevent recurrence.</li></ul></details>
+    </li>
+    <li class="pl-6 pb-8 relative">
+      <span class="absolute w-3 h-3 rounded-full bg-emerald-400" style="left:-7px;top:8px"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4"><h3 class="font-semibold text-lg">Cloud / DevOps Engineer</h3><span class="mono text-xs muted">Jan 2024 – May 2024</span></div>
+      <p class="text-emerald-400 text-sm">Life on a Plane LLC</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs"><span class="tag">AWS / GCP / Azure</span><span class="tag">Jenkins</span><span class="tag">Argo CD</span></div>
+      <details class="mt-3"><summary class="cursor-pointer text-sm text-sky-400 select-none">What I did (8)</summary><ul class="mt-3 space-y-2 text-sm muted list-disc pl-5 max-w-3xl leading-relaxed"><li>Designed and deployed multi-cloud infrastructures on AWS, GCP, and Azure with standardized Terraform v1.6 modules for environment parity.</li><li>Built CI/CD pipelines using Jenkins 2.430 and Docker 24.x, automating build, test, and deploy stages with rollback for zero-downtime releases.</li><li>Managed Amazon RDS for PostgreSQL 15.x with automated snapshots, Multi-AZ deployments, and performance insights for 99.9% uptime.</li><li>Deployed Nginx 1.25 reverse proxy and load balancer with SSL termination, upstream health checks, and rate limiting.</li><li>Implemented Kubernetes v1.28 clusters for microservices with HPA, PodDisruptionBudgets, and Helm 3.x chart-based deployments.</li><li>Automated provisioning with custom Terraform modules and workspaces, using S3 remote state with locking to cut provisioning time from hours to minutes.</li><li>Managed Azure DevOps Pipelines and directed cloud migration projects from on-premises to Azure with minimal business disruption.</li><li>Delivered cloud governance, cost optimization, and security hardening guidance across AWS, Azure, and GCP.</li></ul></details>
+    </li>
+    <li class="pl-6 pb-8 relative">
+      <span class="absolute w-3 h-3 rounded-full bg-amber-400" style="left:-7px;top:8px"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4"><h3 class="font-semibold text-lg">Senior DevOps Engineer</h3><span class="mono text-xs muted">Sep 2023 – Nov 2023</span></div>
+      <p class="text-amber-400 text-sm">Epethilial Tech Services</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs"><span class="tag">Terraform</span><span class="tag">Kubernetes</span><span class="tag">ELK</span></div>
+      <details class="mt-3"><summary class="cursor-pointer text-sm text-sky-400 select-none">What I did (7)</summary><ul class="mt-3 space-y-2 text-sm muted list-disc pl-5 max-w-3xl leading-relaxed"><li>Designed and optimized AWS and GCP infrastructure with Terraform v1.5, reducing provisioning time by 40% and eliminating manual configuration errors.</li><li>Built GitOps-driven CI/CD pipelines using AWS CodePipeline, Helm Charts, and ArgoCD, with blue/green rollouts for zero-downtime delivery.</li><li>Configured the ELK Stack (Elasticsearch 8.x, Logstash, Kibana) for centralized logging, real-time monitoring, and dashboards.</li><li>Managed Amazon RDS for PostgreSQL 14.x and ElastiCache (Redis) with Multi-AZ and caching to reduce database load and keep 99.9% uptime.</li><li>Led AWS cloud migration projects, including complex database migrations using AWS DMS and SCT, with zero data loss.</li><li>Implemented IAM least-privilege policies, Security Groups, and VPC flow logs to strengthen security and meet compliance needs.</li><li>Wrote Shell and Python 3.11 automation scripts for scheduled maintenance, alerting, and resource lifecycle management.</li></ul></details>
+    </li>
+    <li class="pl-6 pb-8 relative">
+      <span class="absolute w-3 h-3 rounded-full bg-sky-400" style="left:-7px;top:8px"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4"><h3 class="font-semibold text-lg">Senior Cloud Engineer</h3><span class="mono text-xs muted">Nov 2022 – Sep 2023</span></div>
+      <p class="text-sky-400 text-sm">CityLab International</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs"><span class="tag">AWS</span><span class="tag">GCP</span><span class="tag">Node.js</span><span class="tag">Nginx</span></div>
+      <details class="mt-3"><summary class="cursor-pointer text-sm text-sky-400 select-none">What I did (8)</summary><ul class="mt-3 space-y-2 text-sm muted list-disc pl-5 max-w-3xl leading-relaxed"><li>Architected AWS and GCP solutions with EC2 Auto Scaling, ALB, IAM, and VPC for high-traffic, business-critical applications.</li><li>Deployed Kubernetes workloads with Nginx 1.25 load balancing, Ingress Controllers, TLS certificates, and network policies.</li><li>Built Elasticsearch 8.x and Kibana dashboards for real-time monitoring, capacity planning, and SLA tracking.</li><li>Deployed Node.js REST APIs and React front-ends using Docker and Nginx with multi-stage builds, reducing image size by 40%.</li><li>Designed Azure infrastructure with Azure Pipelines, AKS, and Blob Storage, migrating legacy workloads to cloud-native architectures.</li><li>Optimized PostgreSQL 13.x with read replicas, connection pooling, and automated PITR backups, improving read throughput by 35%.</li><li>Led cost and security improvements using cost tagging, Reserved Instances, and IAM Access Analyzer.</li><li>Configured CloudFormation stacks and Terraform modules for repeatable deployments across dev, staging, and production.</li></ul></details>
+    </li>
+    <li class="pl-6 relative">
+      <span class="absolute w-3 h-3 rounded-full bg-emerald-400" style="left:-7px;top:8px"></span>
+      <div class="flex flex-wrap items-baseline justify-between gap-x-4"><h3 class="font-semibold text-lg">Cloud Support Engineer</h3><span class="mono text-xs muted">Feb 2020 – Oct 2022</span></div>
+      <p class="text-emerald-400 text-sm">Brain Vision Tech</p>
+      <div class="mt-2 flex flex-wrap gap-2 text-xs"><span class="tag">AWS IAM</span><span class="tag">CloudFormation</span><span class="tag">Bash</span></div>
+      <details class="mt-3"><summary class="cursor-pointer text-sm text-sky-400 select-none">What I did (7)</summary><ul class="mt-3 space-y-2 text-sm muted list-disc pl-5 max-w-3xl leading-relaxed"><li>Managed IAM users, roles, policies, MFA enforcement, and CloudTrail logging for security and audit compliance.</li><li>Designed scalable AWS environments with EC2 Auto Scaling Groups, ALB, and Route53 to handle peak traffic.</li><li>Built CloudWatch monitoring, dashboards, and SNS alerting, with automated remediation via Lambda triggers.</li><li>Automated tasks with Bash/Shell and Python 3.x (boto3): AMI creation, log rotation, S3 lifecycle management, and EC2 patching.</li><li>Deployed and maintained VPCs, subnets, NACLs, NAT Gateways, and CloudFormation stacks for secure, highly available networking.</li><li>Implemented backup and disaster recovery with AWS Backup, RDS snapshots, and cross-region S3 replication to meet RTO/RPO targets.</li><li>Administered Linux (Ubuntu 20.04, CentOS 7, Amazon Linux 2): tuning, package management, cron jobs, and SSH hardening.</li></ul></details>
+    </li>
+  </ol>
+</section>
+
+<!-- CV DOWNLOAD -->
+<section id="cv" class="card p-6 sm:p-8">
+  <div class="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
+    <div class="w-14 h-14 rounded-xl border flex items-center justify-center shrink-0" style="border-color: var(--border);">
+      <i data-lucide="file-text" class="w-7 h-7 text-sky-400"></i>
+    </div>
+    <div class="flex-1">
+      <h2 class="text-2xl sm:text-3xl font-bold">Download my CV</h2>
+      <p class="mt-2 muted leading-relaxed max-w-2xl">
+        Cloud Engineer | DevOps Engineer | Platform Engineer. A PDF with my full experience, skills, education and certifications. Last updated May 2026.
+      </p>
+    </div>
+    <div class="flex flex-wrap gap-3">
+      <a href="Shubham_Phanse_CV.pdf" download="Shubham_Phanse_CV.pdf" class="flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold bg-sky-500 text-white hover:bg-sky-400 transition-colors">
+        <i data-lucide="download" class="w-4 h-4"></i>Download CV
+      </a>
+      <a href="Shubham_Phanse_CV.pdf" target="_blank" rel="noopener" class="tab flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-medium hover:border-sky-400">
+        <i data-lucide="eye" class="w-4 h-4"></i>View online
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 6. FOOTER -->
+<footer class="border-t mt-10" style="border-color: var(--border);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm muted">
+    <p>© 2026 Shubham Phanse. Built for zero downtime.</p>
+    <div class="flex items-center gap-5">
+      <a href="https://github.com/orgs/devops-installation/repositories" target="_blank" rel="noopener" class="hover:text-sky-400 flex items-center gap-2"><i class="devicon-github-original"></i>GitHub</a>
+      <a href="https://www.linkedin.com/in/shubham-phanse-39a56b294" target="_blank" rel="noopener" class="hover:text-sky-400 flex items-center gap-2"><i class="devicon-linkedin-plain"></i>LinkedIn</a>
+      <a href="mailto:phanases@gmail.com" class="hover:text-sky-400 flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>Email</a>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .tag { padding: .2rem .6rem; border-radius: 9999px; border: 1px solid var(--border); color: var(--muted); }
+</style>
+
+<script>
+  // ---------- Skills data ----------
+  const skills = [
+    { name: 'AWS',            icon: 'devicon-amazonwebservices-plain-wordmark text-amber-400', cat: 'cloud' },
+    { name: 'Google Cloud',   icon: 'devicon-googlecloud-plain colored',   cat: 'cloud' },
+    { name: 'Azure',          icon: 'devicon-azure-plain colored',         cat: 'cloud' },
+    { name: 'Terraform',      icon: 'devicon-terraform-plain colored',     cat: 'iac' },
+    { name: 'Kubernetes',     icon: 'devicon-kubernetes-plain colored',    cat: 'iac' },
+    { name: 'Helm',           icon: 'devicon-helm-original colored',       cat: 'iac' },
+    { name: 'Docker',         icon: 'devicon-docker-plain colored',        cat: 'iac' },
+    { name: 'GitHub Actions', icon: 'devicon-githubactions-plain text-sky-400', cat: 'iac' },
+    { name: 'Jenkins',        icon: 'devicon-jenkins-plain colored',       cat: 'iac' },
+    { name: 'Argo CD',        icon: 'devicon-argocd-plain colored',        cat: 'iac' },
+    { name: 'Prometheus',     icon: 'devicon-prometheus-original colored', cat: 'obs' },
+    { name: 'Grafana',        icon: 'devicon-grafana-original colored',    cat: 'obs' },
+    { name: 'ELK Stack',      icon: 'devicon-elasticsearch-plain colored', cat: 'obs' },
+    { name: 'PostgreSQL',     icon: 'devicon-postgresql-plain colored',    cat: 'obs' },
+    { name: 'Linux',          icon: 'devicon-linux-plain text-amber-400',  cat: 'os' },
+    { name: 'Bash',           icon: 'devicon-bash-plain text-emerald-400', cat: 'os' },
+    { name: 'Python',         icon: 'devicon-python-plain colored',        cat: 'os' },
+    { name: 'Nginx',          icon: 'devicon-nginx-original colored',      cat: 'os' },
+    { name: 'Node.js',        icon: 'devicon-nodejs-plain colored',        cat: 'os' }
+  ];
+
+  const grid = document.getElementById('skillGrid');
+  grid.innerHTML = skills.map(s => `
+    <div class="skill rounded-xl border p-4 flex flex-col items-center gap-3 text-center" style="border-color: var(--border);" data-cat="${s.cat}">
+      <i class="${s.icon} text-4xl"></i>
+      <span class="text-sm font-medium">${s.name}</span>
+    </div>`).join('');
+
+  // ---------- Skill filter tabs ----------
+  const tabs = document.querySelectorAll('#tabs .tab');
+  tabs.forEach(tab => tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+    const f = tab.dataset.filter;
+    document.querySelectorAll('.skill').forEach(el => {
+      el.classList.toggle('hide', f !== 'all' && el.dataset.cat !== f);
+    });
+  }));
+
+  // ---------- Theme toggle ----------
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    try { localStorage.setItem('theme', isDark ? 'dark' : 'light'); } catch (e) {}
+  });
+
+  // ---------- Copy certificate code ----------
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    const code = document.getElementById('certCode').textContent.trim();
+    const label = document.getElementById('copyLabel');
+    try {
+      await navigator.clipboard.writeText(code);
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = code; document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); ta.remove();
+    }
+    label.textContent = 'Copied!';
+    setTimeout(() => label.textContent = 'Copy Code', 1800);
+  });
+
+  lucide.createIcons();
+</script>
+</body>
+</html>
